@@ -1,0 +1,123 @@
+/* Apply a global reset to remove default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and borders are included in element's total width/height */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #ccc;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: cursive;
+    font-size: 40px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 65%;
+    padding-inline-start: 20px;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+}
+
+.artwork {
+    width: calc(30% - 10px);
+    height: 200px;
+    background-color: #ccc;
+    margin: 5px;
+    text-align: center;
+    line-height: 200px;
+    position: relative;
+}
+
+.form-section {
+    width: 30%;
+    pad: 20px;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    z-index: 2;
+    position: relative;
+    font-family: cursive;
+    font-size: 20px;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label, input {
+    margin-bottom: 10px;
+}
+button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive styles for iPad and smaller screens */
+@media (max-with:1024px) {
+    .gallery-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .gallery {
+        width: 100%;
+    }
+    .form-section {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .artwork {
+        width: calc(48% - 10px);
+    }
+}
+
+/* Responsive styles for mobile screens */
+@media (max-width: 480px) {
+    .artwork {
+        width: calc(100% - 10px); /* Each artwork takes full width on mobile */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Reduce font size for smaller screens */
+    }
+}
+
+/* Footer styling */
+footer {
+    background-color: #333; 
+    color: #fff; 
+    text-align: center; 
+    padding: 10px;  
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+}

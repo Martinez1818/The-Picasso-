@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Gallery</title>
+    <link rel="stylesheet" href="style.css" >
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Virtual Gallery</h1>
+    </header>
+    <main class="gallery-container">
+        <!--Main container for the gallery and form-->
+        <section class="gallery">
+            <div class="artwork" id="art1">Artwork 1</div>
+            <div class="artwork" id="art2">Artwork 2</div>
+            <div class="artwork" id="art3">Artwork 3</div>
+        </section>
+
+        <!--form for collecting visitor informatiom -->
+        <section class="form-section">
+            <h2>Interested in our gallery?</h2>
+            <form action="Thankyou.html" method="post">
+
+                <!--Input for vistior's name-->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <!--Input for visitor's email-->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required> 
+                
+                <!--Submit Button-->
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Virtual Gallery. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
